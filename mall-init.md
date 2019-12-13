@@ -1,17 +1,17 @@
 # 一、新建系统用户<br>
-   adduser mall
-   passwd mall
+  ## adduser mall
+  ## passwd mall
 # 二、创建ftp服务<br>
-   1、安装vsftp<br>
+   ## 1、安装vsftp<br>
     yum -y install vsftpd
-   2、修改配置文件，保证下面3项为YES
+   ## 2、修改配置文件，保证下面3项为YES
     anonymous_enable=NO //设定不允许匿名访问
-	chroot_list_enable=YES //使用户不能离开主目录
+    chroot_list_enable=YES //使用户不能离开主目录
     anon_upload_enable=YES
     anon_mkdir_write_enable=YES
-   3、设置vsftpd开机启动
+  ## 3、设置vsftpd开机启动
     systemctl enable vsftpd.service
-   4、权限
+  ## 4、权限
     ftpusers和user_list没有任何关系
 	ftpusers，是个黑名单，文件总是生效
 	user_list则取决于userlist_enable和userlist_deny两项配置。
