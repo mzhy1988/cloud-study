@@ -32,16 +32,16 @@ docker run -d --restart=always -p 8080:8080 rancher/server <br>
 
 ## 私有镜像仓库harbor 安装 
 参考 https://blog.csdn.net/weixin_41465338/article/details/80146218  
- ``` 
-1、安装docker 
-2、安装python-pip
+ 
+ ### 1、安装docker 
+ ### 2、安装python-pip
    yum install python-pip
-3、安装 docker-compose
+ ### 3、安装 docker-compose
    pip install docker-compose
-4、离线安装Harbor 
-   ### 下载
+ ### 4、离线安装Harbor 
+   #### 下载
    wget https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-offline-installer-v1.8.0.tgz
-   ### 解压
+   #### 解压
    tar xvf harbor-offline-installer-v1.8.0.tgz
    #进入解压目录修改 harbor.cfg 文件
    #如下证书使用的是腾讯云申请的 DV SSL证书（Domain Validation SSL），申请后大概一小时会通过邮件得到信息，将申请到的证书下载下来，使用Nginx包内的Crt及Key文件即可。
@@ -57,7 +57,7 @@ docker run -d --restart=always -p 8080:8080 rancher/server <br>
    #安装后公司harbor地址 http://192.168.20.232:8999/harbor/
  
 默认密码 Harbor12345
- ```
+ 
 ## 向harbor推送镜像###########################
 ### 1、关于harbor的安全问题 
     docker 的镜像拉取和推送默认https方式，harbor的https要去域名证书
