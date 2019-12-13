@@ -32,7 +32,7 @@ docker run -d --restart=always -p 8080:8080 rancher/server <br>
 
 ## 私有镜像仓库harbor 安装 
 参考 https://blog.csdn.net/weixin_41465338/article/details/80146218  
- (```) 
+ ``` 
 1、安装docker 
 2、安装python-pip
    yum install python-pip
@@ -57,7 +57,7 @@ docker run -d --restart=always -p 8080:8080 rancher/server <br>
    #安装后公司harbor地址 http://192.168.20.232:8999/harbor/
  
 默认密码 Harbor12345
- (```) 
+ ```
 ## 向harbor推送镜像###########################
 ### 1、关于harbor的安全问题 
     docker 的镜像拉取和推送默认https方式，harbor的https要去域名证书
