@@ -17,7 +17,8 @@
     ftpusers，是个黑名单，文件总是生效
     user_list则取决于userlist_enable和userlist_deny两项配置。
     userlist_enable和userlist_deny两个选项联合起来针对的是：
-       本地全体用户（除去ftpusers中的用户） 和出现在user_list文件中的用户以及不在在user_list文件中的用户这三类用户集合进行的设置。
+       本地全体用户（除去ftpusers中的用户） 和出现在user_list文件中的用户以及不在在user_list文件中的用户这三类
+    用户集合进行的设置。
     当且仅当userlist_enable=YES时：userlist_deny项的配置才有效，user_list文件才会被使用；
     当其为NO时，无论userlist_deny项为何值都是无效的，本地全体用户（除去ftpusers中的用户）都可以登入FTP
     当userlist_enable=YES时，userlist_deny=YES时：user_list是一个黑名单，即：所有出现在名单中的用户都会被拒绝登入；
