@@ -5,6 +5,7 @@
    ## 1、安装vsftp<br>
     yum -y install vsftpd
    ## 2、修改配置文件
+    #vim /etc/vsftpd/vsftpd.conf
     anonymous_enable=NO //设定不允许匿名访问
     chroot_list_enable=YES //使用户不能离开主目录
     anon_upload_enable=YES
