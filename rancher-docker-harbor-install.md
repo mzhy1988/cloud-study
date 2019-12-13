@@ -15,24 +15,24 @@ yum install docker-ce-18.06.1.ce -y <br>
 
 
 ## docker 镜像加速
-鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，我们可以需要配置加速器来解决，我使用的是阿里的镜像地址：
+鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，我们可以需要配置加速器来解决，我使用的是阿里的镜像地址：<br>
 
-1.查看 /etc/docker下是否有daemon.json 文件,如果有,直接在文件上按下面步骤更改,如果没有,则创建此文件: touch daemon.json
-2.vi daemon.json 加入内容如下并保存退出:
-{"registry-mirrors": ["https://96e6e1rd.mirror.aliyuncs.com"] }
-执行命令:sudo systemctl daemon-reload
-执行命令sudo systemctl restart docker
+1.查看 /etc/docker下是否有daemon.json 文件,如果有,直接在文件上按下面步骤更改,如果没有,则创建此文件: touch daemon.json <br>
+2.vi daemon.json 加入内容如下并保存退出: <br>
+{"registry-mirrors": ["https://96e6e1rd.mirror.aliyuncs.com"] } <br>
+执行命令:sudo systemctl daemon-reload <br>
+执行命令sudo systemctl restart docker <br>
 
 ## rancher 安装
-1、搜索镜像
-docker search rancher
-2、启动
-docker run -d --restart=always -p 8080:8080 rancher/server
+1、搜索镜像 <br>
+docker search rancher <br>
+2、启动 <br>
+docker run -d --restart=always -p 8080:8080 rancher/server <br>
 
 
-## 私有镜像仓库harbor 安装,
-参考 https://blog.csdn.net/weixin_41465338/article/details/80146218
-1、安装docker
+## 私有镜像仓库harbor 安装 
+参考 https://blog.csdn.net/weixin_41465338/article/details/80146218 
+` 1、安装docker 
 2、安装python-pip
    yum install python-pip
 3、安装 docker-compose
@@ -56,7 +56,7 @@ docker run -d --restart=always -p 8080:8080 rancher/server
    #安装后公司harbor地址 http://192.168.20.232:8999/harbor/
  
 默认密码 Harbor12345
-
+` 
 ## 向harbor推送镜像###########################
 ### 1、关于harbor的安全问题 
     docker 的镜像拉取和推送默认https方式，harbor的https要去域名证书
