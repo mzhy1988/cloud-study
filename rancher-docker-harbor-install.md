@@ -42,23 +42,23 @@ docker run -d --restart=always -p 8080:8080 rancher/server <br>
    #### 下载
    wget https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-offline-installer-v1.8.0.tgz
    #### 解压
-   tar xvf harbor-offline-installer-v1.8.0.tgz
-   #进入解压目录修改 harbor.cfg 文件
-   #如下证书使用的是腾讯云申请的 DV SSL证书（Domain Validation SSL），申请后大概一小时会通过邮件得到信息，将申请到的证书下载下来，使用Nginx包内的Crt及Key文件即可。
-   设置 hostname
-   设置证书地址
+   tar xvf harbor-offline-installer-v1.8.0.tgz  <br>
+   #进入解压目录修改 harbor.cfg 文件  <br>
+   #如下证书使用的是腾讯云申请的 DV SSL证书（Domain Validation SSL），申请后大概一小时会通过邮件得到信息，将申请到的证书下载下来，使用Nginx包内的Crt及Key文件即可。  <br>
+   设置 hostname  <br>
+   设置证书地址  <br>
    ssl_cert = /data/cert/server.crt
    ssl_cert_key = /data/cert/server.key
-   设置管理员账户密码 harbor_admin_password
+   设置管理员账户密码 harbor_admin_password  <br>
    #安装
    ./prepare
    ./install.sh 
-   harbor的启动命令 docker-compose up 
+   harbor的启动命令 docker-compose up  <br>
    #安装后公司harbor地址 http://192.168.20.232:8999/harbor/
  
 默认密码 Harbor12345
  
-## 向harbor推送镜像###########################
+## 向harbor推送镜像
 ### 1、关于harbor的安全问题 
     docker 的镜像拉取和推送默认https方式，harbor的https要去域名证书
 	如果没有域名证书可以尝试使用http协议，在docker的配置里面增加可信镜像仓库
