@@ -1,7 +1,7 @@
-#一、新建系统用户<br>
+# 一、新建系统用户<br>
    adduser mall
    passwd mall
-#二、创建ftp服务<br>
+# 二、创建ftp服务<br>
    1、安装vsftp<br>
     yum -y install vsftpd
    2、修改配置文件，保证下面3项为YES
