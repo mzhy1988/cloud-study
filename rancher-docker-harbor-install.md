@@ -5,13 +5,13 @@
 
 ## docker 安装
 安装所需要的依赖包
-yum install -y yum-utils device-mapper-persistent-data lvm2
-改用阿里源
-yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum install -y yum-utils device-mapper-persistent-data lvm2 <br>
+改用阿里源 <br>
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo <br>
 查看仓库内可选的版本包
-yum list docker-ce --showduplicates | sort -r
-选则其中一个包安装
-yum install docker-ce-18.06.1.ce -y
+yum list docker-ce --showduplicates | sort -r <br>
+选则其中一个包安装 <br>
+yum install docker-ce-18.06.1.ce -y <br>
 
 
 ## docker 镜像加速
