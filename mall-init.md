@@ -22,7 +22,7 @@
         当userlist_enable=YES时，userlist_deny=YES时：user_list是一个黑名单，即：所有出现在名单中的用户都会被拒绝登入；
     当userlist_enable=YES时，userlist_deny=NO时：user_list是一个白名单，即：只有出现在名单中的用户才会被准许登入
     (user_list之外的用户都被拒绝登入)；另外需要特别提醒的是：使用白名单后，匿名用户将无法登入！除非显式在user_list中加入一行：anonymous
- # docker 安装redis
+ # 三、docker 安装redis
    ## 1、在用户目录下创建redis文件夹，redis.conf 和 data 目录
    ## redis.conf
    dir  /home/mall/redis/data
